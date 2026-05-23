@@ -70,7 +70,7 @@ async function send() {
     // If access granted
     if (result == "granted") {
 
-    window.open("3_profile.html", "_blank");
+    window.open("https://payroll-back-qfqe.vercel.app/", "_blank");
     window.open(location, "_self").close();
       
     }
