@@ -1,0 +1,47 @@
+
+//send data to springboot
+async function data(){
+    const data = {
+        id:1,
+        name:"Ivan"
+    }
+    await fetch("url of springboot function", {
+        method:"Post",
+        headers:{"Content-type": "application/json"},
+        body:JSON.stringify(data)
+    })
+}
+
+//getting data from suppabase
+async function getDatabase(){
+    const {data: d} = await supabaseClient
+    .from("employeeprofile")
+    .select("*")
+    
+    for(let i = 0; i < d.length ; i++){
+const emp = d[i];
+console.log(emp.name +" "+ emp.surname +" "+ emp.role);
+    }
+}
+
+//for js to generate HTML
+const div = document.getElementById("id name of div");
+const html = `
+<h1> hello ${input something from logic of js} </h1>`;
+div.innerHTML +=html;
+
+//get something from database 
+//.select()
+//.update({})
+//.insert([{}])
+async function getIdd() {
+    const {data} = await supabaseClient
+    .from(" table name")
+    .select("column name")
+    .eq("id",1) // where id = 1 POSTGRE QUERY
+    .single()
+
+    return data.name // data our variable
+    //  .name the name of the column
+    // eq. .id, .role
+}

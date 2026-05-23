@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="1_login.css">
+
+</head>
+
+<body>
+<div class="back">
+    <img src="picLog.png" style="max-width: 900%; height: auto;">
+</div>
+    <div class="card">
+        <div class="top">
+            <h1 id="feed">Enter credentials</h1>
+        </div>
+        <div class="name">
+            <label for="nameLog">Name: </label>
+           <input type="text" placeholder="Juan" id="nameLog" autocomplete="off">
+            <label for="pass">Password: </label>
+           <input type="password" placeholder="*****" id="pass" autocomplete="off">
+        </div>
+        <div class="bot">
+            <h1 id="tap">Enter</h1>
+         
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="2_index.js"></script>
+</body>
+</html>
+
+<!-- 
+card
+    -top
+        --feed (change if id is not right or name is not registered)
+    -name
+        --nameLog (name input box)
+        --pass (pass input box)
+    -bot
+        --tap (button to tap)
+        --counter (counter)
+        
+    
+ 
+
+-->
